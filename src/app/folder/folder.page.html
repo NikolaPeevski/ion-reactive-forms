@@ -16,6 +16,35 @@
 
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>
+      Explore
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://ionicframework.com/docs/components"
+        >UI Components</a
+      >
+    </p>
   </div>
+  <form [formGroup]="registerForm" (ngSubmit)="onRegisterUser()">
+    <ion-item lines="full" color="secondary">
+      <ion-icon name="mail-outline"></ion-icon>
+      <ion-input
+        placeholder="Email"
+        type="email"
+        formControlName="email"
+      ></ion-input>
+    </ion-item>
+    <ion-item lines="full" color="secondary">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <ion-input
+        placeholder="Password"
+        type="password"
+        formControlName="password"
+      ></ion-input>
+    </ion-item>
+    <ion-button expand="full" type="submit" color="primary"
+      >REGISTER</ion-button
+    >
+  </form>
 </ion-content>
